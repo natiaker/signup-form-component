@@ -13,5 +13,4 @@
 
 ## Author
 
-- Frontend Mentor - [@natiaker](https://www.frontendmentor.io/profile/natiaker)
 - Linkedin - [Natia Kerdzaia](linkedin.com/in/natiaker/)
