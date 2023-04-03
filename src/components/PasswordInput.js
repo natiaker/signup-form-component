@@ -1,5 +1,5 @@
-import { TextField } from "@mui/material";
-import { rootInputStyles } from "../rootStyles";
+import { TextField, Typography } from "@mui/material";
+import { rootErrorMsgStyles, rootInputStyles } from "../rootStyles";
 import { Controller } from "react-hook-form";
 
 const PasswordInput = ({ control, errors }) => {
@@ -18,7 +18,11 @@ const PasswordInput = ({ control, errors }) => {
           variant='outlined'
           sx={{ ...rootInputStyles }}
           error={!!errors.password}
-          helperText={errors.password?.message}
+          helperText={
+            <Typography sx={{ ...rootErrorMsgStyles }}>
+              {errors.password?.message}
+            </Typography>
+          }
         />
       )}
     />

@@ -1,5 +1,5 @@
-import { TextField } from "@mui/material";
-import { rootInputStyles } from "../rootStyles";
+import { TextField, Typography } from "@mui/material";
+import { rootErrorMsgStyles, rootInputStyles } from "../rootStyles";
 import { Controller } from "react-hook-form";
 
 const EmailInput = ({ control, errors }) => {
@@ -11,7 +11,7 @@ const EmailInput = ({ control, errors }) => {
       rules={{
         required: "Email cannot be empty",
         pattern: {
-          value: /^\S+@\S+$/i,
+          value: /\S+@\S+\.\S+/i,
           message: "Looks like this is not an email",
         },
       }}
@@ -23,7 +23,11 @@ const EmailInput = ({ control, errors }) => {
           variant='outlined'
           sx={{ ...rootInputStyles }}
           error={!!errors.email}
-          helperText={errors.email?.message}
+          helperText={
+            <Typography sx={{ ...rootErrorMsgStyles }}>
+              {errors.email?.message}
+            </Typography>
+          }
         />
       )}
     />

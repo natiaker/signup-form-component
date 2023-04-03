@@ -10,10 +10,20 @@ const rootContainerStyles = {
 };
 
 const rootInputStyles = {
-  border: "1px solid #DEDEDE",
-  borderRadius: "5px",
   width: "100%",
+  borderRadius: "5px",
   marginBottom: "20px",
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      border: "1px solid #DEDEDE",
+    },
+    "&.Mui-error": {
+      border: "2px solid #FF7979",
+      backgroundImage: "url('./images/icon-error.svg')",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "right 27px center",
+    },
+  },
 };
 
 const rootFormControlStyles = {
@@ -35,13 +45,18 @@ const rootFormHeadingStyles = {
 };
 
 const rootSubmitButtonStyles = {
-  display: "flex",
-  alignSelf: "center",
-  justifyContent: "center",
+  display: "block",
+  margin: "0 auto",
   bgcolor: "#38CC8B",
   paddingTop: "15px",
   paddingBottom: "15px",
   ":hover": { bgcolor: "#77E2B3" },
+};
+
+const rootErrorMsgStyles = {
+  color: "#FF7979",
+  fontStyle: "italic",
+  textAlign: "right",
 };
 
 export {
@@ -50,4 +65,5 @@ export {
   rootFormControlStyles,
   rootFormHeadingStyles,
   rootSubmitButtonStyles,
+  rootErrorMsgStyles,
 };
