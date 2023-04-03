@@ -36,6 +36,8 @@ const rootFormHeadingStyles = {
 
 const rootSubmitButtonStyles = {
   display: "flex",
+  alignSelf: "center",
+  justifyContent: "center",
   bgcolor: "#38CC8B",
   paddingTop: "15px",
   paddingBottom: "15px",
