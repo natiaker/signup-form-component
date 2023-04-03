@@ -11,10 +11,12 @@ const Form = () => {
   const {
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm();
   const onSubmit = data => {
     console.log(data);
+    reset();
   };
   const onErrors = errors => console.error(errors);
 
